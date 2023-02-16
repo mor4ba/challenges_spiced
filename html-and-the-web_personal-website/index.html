@@ -53,6 +53,27 @@
       <section class="two-column">
         <div class="wrapper">
           <div class="column left">
+            <img
+              src="https://source.unsplash.com/random/400x300?fruit"
+              alt="a random picture"
+            />
+          </div>
+          <div class="column right">
+            <h2>some cool picture!</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            dolore quae soluta nisi ex? Maiores laboriosam fuga necessitatibus,
+            eveniet excepturi dignissimos magni quos, sit officiis
+            reprehenderit, ex sint recusandae nulla. Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Beatae excepturi nesciunt facilis
+            vitae? Mollitia tempora, libero ullam quisquam obcaecati, veritatis
+            maxime sequi nobis nemo earum neque, delectus necessitatibus quo
+            placeat.
+          </div>
+        </div>
+      </section>
+      <section class="two-column">
+        <div class="wrapper">
+          <div class="column left">
             <h2>Things i dont like to do</h2>
           </div>
           <div class="column right">
@@ -69,21 +90,76 @@
       </section>
     </main>
     <footer>
-      <div class="wrapper">
-        <div class="footer-left">
-          <nav>
-            <li><a href="#data-policy">Data policy</a></li>
-            <li><a href="mailto:moritzhoffmeyer@icloud.com">contact</a></li>
-            <li><a href="#imprint">Imprint</a></li>
-          </nav>
+      <div class="wrapper inner-list">
+        <div class="menu-element">
+          <a id="expandTrigger" href="#" class="menu">
+            <span class="counter">01</span>
+            <span class="title">contact</span>
+            <span class="graphic"
+              ><svg class="icon icon-mail">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </span>
+            <div
+              id="expandContent"
+              class="accordionContent"
+              aria-expanded="false"
+            >
+              <div class="wrapper">
+                <p>
+                  moritz hoffmeyer<br />
+                  corinthstraße 63<br />
+                  10245 berlin<br />
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
-        <div class="footer-right">
-          <nav>
-            <li><a href="mailto:moritzhoffmeyer@icloud.com">loveletters</a></li>
-            <li>copyright 2023 @me</li>
-          </nav>
+        <div class="menu-element">
+          <a href="#">
+            <span class="counter">02</span>
+            <span class="title">imprint</span>
+            <span class="graphic"
+              ><svg class="icon icon-mail">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="menu-element">
+          <a href="#">
+            <span class="counter">03</span>
+            <span class="title">data policy</span>
+            <span class="graphic"
+              ><svg class="icon icon-mail">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="menu-element">
+          <a href="#">
+            <span class="counter">04</span>
+            <span class="title">linkedin</span>
+            <span class="graphic"
+              ><svg class="icon icon-mail">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
+      <script rel="JavaScript" src="assets/scripts.js"></script>
     </footer>
+
+    <svg style="display: none">
+      <defs>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+          <path
+            d="M3 7.921l8.427 5.899c0.34 0.235 0.795 0.246 1.147 0l8.426-5.899v10.079c0 0.272-0.11 0.521-0.295 0.705s-0.433 0.295-0.705 0.295h-16c-0.272 0-0.521-0.11-0.705-0.295s-0.295-0.433-0.295-0.705zM1 5.983c0 0.010 0 0.020 0 0.030v11.987c0 0.828 0.34 1.579 0.88 2.12s1.292 0.88 2.12 0.88h16c0.828 0 1.579-0.34 2.12-0.88s0.88-1.292 0.88-2.12v-11.988c0-0.010 0-0.020 0-0.030-0.005-0.821-0.343-1.565-0.88-2.102-0.541-0.54-1.292-0.88-2.12-0.88h-16c-0.828 0-1.579 0.34-2.12 0.88-0.537 0.537-0.875 1.281-0.88 2.103zM20.894 5.554l-8.894 6.225-8.894-6.225c0.048-0.096 0.112-0.183 0.188-0.259 0.185-0.185 0.434-0.295 0.706-0.295h16c0.272 0 0.521 0.11 0.705 0.295 0.076 0.076 0.14 0.164 0.188 0.259z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
   </body>
 </html>
