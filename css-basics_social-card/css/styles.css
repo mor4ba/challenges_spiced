@@ -1,3 +1,37 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  background: lightgray;
+  font-family: arial, Arial, Helvetica, sans-serif;
+}
+
+body p.lightgray {
+  color: lightgray;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+svg {
+  color: #5ab5d2;
+}
+
+body article {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+
+body article h2 {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article img {
+  border-radius: 25px;
+}
