@@ -8,6 +8,7 @@ body {
 
 body a {
   color: inherit;
+  transition: 0.25s ease;
 }
 
 body h1 {
@@ -16,7 +17,6 @@ body h1 {
 }
 
 body main {
-  min-height: calc(100vh - 99px);
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
@@ -28,10 +28,50 @@ main section {
   margin: 3.5rem 0 1rem;
 }
 
+section.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+section.welcome {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
 section.welcome h1,
 section.welcome h2 {
   text-align: center;
   font-weight: 600;
+  margin-bottom: 2.5rem;
+  align-self: center;
+}
+
+section.two-column .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+section.two-column .wrapper .column {
+  width: 50%;
+}
+
+body h2 {
+  margin-top: 0;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 2.4rem;
+}
+
+body h2::after {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 75%;
+  height: 2px;
+  background: #f2e500;
+  content: "";
 }
 
 body li {
@@ -49,6 +89,7 @@ header {
   background: black;
   color: white;
   border-bottom: 2px solid black;
+  font-family: monospace;
 }
 
 header .wrapper {
@@ -78,12 +119,18 @@ header .header-right nav li {
   padding: 0 1rem;
 }
 
+header a:hover,
+footer a:hover {
+  color: #f2e500;
+}
+
 footer {
   max-width: 100%;
   padding: 1rem 2rem;
   color: white;
   background: black;
   margin-top: 3.5rem;
+  font-family: monospace;
 }
 
 footer .wrapper {
