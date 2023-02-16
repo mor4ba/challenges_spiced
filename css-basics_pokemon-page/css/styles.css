@@ -9,8 +9,9 @@
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
 /* add selector */
- {
+* {
   font-family: monospace;
+  box-sizing: border-box;
   font-size: 1rem;
   line-height: 1.5;
   background-color: LemonChiffon;
@@ -20,7 +21,14 @@
 
 /* Task 3: To set the line height to 1.5 is good for texts, because of accessibility concerns, but for the headings it seems too much. Let's change this by giving our headings a line height of 1.2: */
 
-/* your solution */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
 
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside of the declaration block of the next CSS rule:
 
@@ -31,7 +39,11 @@
 */
 
 .title {
-  /* your solution */
+  background-color: white;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 /* ------- Sections ------- */
@@ -45,7 +57,14 @@
 */
 
 section {
-  /* your solution */
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-left: 5px solid orange;
+}
+
+section:nth-of-type(2) {
+  border-left: 5px solid gold;
 }
 
 /* ------- Headings Part 2 ------- */
@@ -59,7 +78,13 @@ section {
 */
 
 .subtitle {
-  /* your solution */
+  display: inline-block;
+  border-bottom: 3px solid gold;
+  padding-bottom: 0.4rem;
+}
+
+section.favourites .subtitle {
+  border-bottom: 3px solid orange;
 }
 
 /* ------- List ------- */
@@ -67,14 +92,14 @@ section {
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
 
 /* add selector */
- {
+section.favourites li {
   list-style: "🧡";
-  padding-left: /* add value */ ;
+  padding-left: 1rem;
 }
 
 /* add selector */
- {
-  padding-left: /* add value */ ;
+section li {
+  padding-left: 1rem;
 }
 
 /* ------- The End -------- */
