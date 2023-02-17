@@ -1,30 +1,19 @@
+import observe from "./components/observer.js";
+import FooterExpand from "./components/footerExpand.js";
+
 addEventListener("DOMContentLoaded", (event) => {
-  const expandTrigger = document.getElementById("expandTrigger");
   negativeMouse();
+  new observe();
+  new FooterExpand();
 });
 
-expandTrigger.addEventListener("click", () => {
-  event.preventDefault();
-  expandAccordion();
+document.getElementById("expandTrigger").addEventListener("click", (e) => {
+  e.preventDefault();
 });
 
-function expandAccordion() {
-  this.content = document.getElementById("expandContent");
-  this.trigger = document.getElementById("expandTrigger");
-  const accHeight = this.content.scrollHeight;
-
-  if (this.content.getAttribute("aria-expanded") == "false") {
-    this.content.style.height = accHeight + "px";
-    this.content.setAttribute("aria-expanded", true);
-    this.trigger.classList.add("expanded");
-    this.trigger.parentElement.classList.add("bg-bright");
-  } else {
-    this.content.style.height = "0px";
-    this.content.setAttribute("aria-expanded", false);
-    this.trigger.classList.remove("expanded");
-    this.trigger.parentElement.classList.remove("bg-bright");
-  }
-}
+document.getElementById("push-to-top").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 function negativeMouse() {
   var $c = document.querySelector("[data-custom-cursor]");
