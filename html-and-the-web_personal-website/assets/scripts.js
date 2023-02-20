@@ -5,6 +5,37 @@ addEventListener("DOMContentLoaded", (event) => {
   negativeMouse();
   new observe();
   new FooterExpand();
+
+  const scrollButton = document.getElementById("push-to-top");
+  const header = document.getElementById("header");
+  const footer = document.getElementById("contact");
+
+  let observer;
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        scrollButton.addClass("fade-out");
+      } else {
+        scrollButton.removeClass("fade-out");
+      }
+    });
+  });
+
+  observer.observe(footer);
+  //observer.observe(header);
+
+  let topObserver;
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        scrollButton.removeClass("fade-out");
+      } else {
+        scrollButton.addClass("fade-in");
+      }
+    });
+  });
+
+  topObserver.observe(header);
 });
 
 document.getElementById("expandTrigger").addEventListener("click", (e) => {
