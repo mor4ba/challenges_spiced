@@ -7,8 +7,8 @@ function handleUserLogin(onSuccess) {
 
 // Call handleUserLogin below!
 
-function showWelcomeMessage() {
-  console.log("desired text");
+function showWelcomeMessage(text) {
+  console.log("Welcome ! youre logged in now!");
 }
 
 handleUserLogin(showWelcomeMessage);
