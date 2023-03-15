@@ -3,7 +3,7 @@ export function getFirstNames(people) {
 }
 
 export function getFullNames(people) {
-  return people.map((person) => person.firstName + ` ` + person.lastName);
+  return people.map((person) => `${person.firstName} ${person.lastName}`);
 }
 
 export function getNameAndAge(people) {

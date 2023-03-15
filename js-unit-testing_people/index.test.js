@@ -73,10 +73,12 @@ test('getNameAndAge() returns an array of formatted strings like this: "Skywalke
 test("getPeopleByAge() returns an array of people of a certain age", () => {
   const result = getPeopleByAge(people, 32);
   expect(result).toEqual([people[2]]);
+  expect(result[0].age).toEqual(32);
 });
 
 test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
   const result = getPeopleNamesOlderThan(people, 30);
+  console.log(result);
   expect(result).toEqual(["Max", "Erika"]);
 });
 
