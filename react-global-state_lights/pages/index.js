@@ -1,7 +1,7 @@
 import Link from "../components/Link";
 
 export default function HomePage({ lights }) {
-  const lightsOn = lights.filter((light) => light.isOn === true);
+  const lightsOn = lights.filter((light) => light.isOn);
 
   return (
     <div>

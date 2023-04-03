@@ -24,18 +24,10 @@ export default function App({ Component, pageProps }) {
     );
   }
 
-  function shutLights() {
+  function turnAllLights(bool) {
     setLights(
       lights.map((light) =>
-        light.isOn === true ? { ...light, isOn: false } : light
-      )
-    );
-  }
-
-  function turnLights() {
-    setLights(
-      lights.map((light) =>
-        light.isOn === false ? { ...light, isOn: true } : light
+        light.isOn !== bool ? { ...light, isOn: bool } : light
       )
     );
   }
@@ -47,8 +39,7 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         lights={lights}
         onToggle={toggleLight}
-        turnLightsOff={shutLights}
-        turnLightsOn={turnLights}
+        turnLights={turnAllLights}
       />
     </Layout>
   );
